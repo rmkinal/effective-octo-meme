@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LuxGuide - LED Lighting Expert</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="app__header">
+        <div>
+          <p class="app__eyebrow">LuxGuide</p>
+          <h1>LED Lighting Expert Chatbot</h1>
+          <p class="app__subtitle">
+            Ask about LED strip sizing, power supplies, CCT, CRI, dimming, wiring, and fixtures.
+          </p>
+        </div>
+        <div class="app__status">
+          <span class="status-dot" aria-hidden="true"></span>
+          <span>LED Expert Online</span>
+        </div>
+      </header>
+
+      <section class="chat" aria-live="polite">
+        <div class="chat__messages" id="chatMessages">
+          <article class="message message--assistant">
+            <h2>LuxGuide</h2>
+            <p>
+              Hi! I’m your LED lighting expert. Tell me about your space, goals, and any constraints,
+              and I’ll recommend the right LED solution.
+            </p>
+            <ul>
+              <li>Room size and purpose</li>
+              <li>Desired brightness or mood</li>
+              <li>Power supply or dimming preferences</li>
+            </ul>
+          </article>
+        </div>
+        <form class="chat__composer" id="chatForm">
+          <div class="composer__field">
+            <label for="messageInput">Message</label>
+            <textarea
+              id="messageInput"
+              name="message"
+              rows="2"
+              placeholder="Describe your LED lighting project..."
+              required
+            ></textarea>
+          </div>
+          <div class="composer__actions">
+            <button type="button" class="ghost" id="quickPrompt">
+              Need a quick recommendation
+            </button>
+            <button type="submit" class="primary">Ask LuxGuide</button>
+          </div>
+        </form>
+      </section>
+
+      <aside class="tips">
+        <h2>LED Tips</h2>
+        <div class="tips__grid">
+          <div>
+            <h3>Brightness</h3>
+            <p>General lighting: 100-200 lumens/ft for strips.</p>
+          </div>
+          <div>
+            <h3>Color Quality</h3>
+            <p>Choose CRI 90+ for true colors in living areas.</p>
+          </div>
+          <div>
+            <h3>Power</h3>
+            <p>Add 20% headroom to your LED driver wattage.</p>
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
